@@ -1,5 +1,5 @@
 
-# Byte-compiled / optimized / DLL files
+# byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
@@ -7,7 +7,7 @@ __pycache__/
 # jupyter Notebook checkpoints
 .ipynb_checkpoints
 
-# Environment
+# environment
 .env
 env/
 venv/
@@ -22,15 +22,15 @@ venv/
 .Python
 *.sqlite3
 
-# VSCode
+
 .vscode/
 
-# Logs and debug
-logs/
+# logs and debug
+logs/*
 *.log
 
-# Chroma vector database
-chroma_db/
+# chroma vector database
+chroma_db/*
 
 # data files
-data/
+data/*
