@@ -37,20 +37,22 @@ This app improves financial literacy by letting users explore real-world complai
 
 ```
 chatbot/
-├── app.py                          # Streamlit UI chatbot
-├── ingest.py                      # One-time or repeat ingestion script with logging
 ├── chroma_db/                     # Vectorstore with persistent embeddings
 ├── data/
 │   └── complaints.csv             # Complaint dataset (CSV)
 ├── logs/
 │   └── ingestion.log              # Ingestion logs
 ├── notebooks/
-│   ├── cc-chatbot.ipynb           # CLI testing and debug
-│   └── llm-rag.ipynb              # Experimentation notebook
+│   ├── rag-llm.ipynb           # CLI testing and debug
+│   └── exp-rag.ipynb              # Experimentation notebook
 ├── .env                           # Environment variables for keys, etc.
 ├── env.yml                        # Conda environment file
 ├── requirements.txt               # Python package dependencies
 └── README.md                      # You're here!
+├── src/
+│   └── app.py                          # Streamlit UI chatbot
+│   └── ingest.py                      # One-time or repeat ingestion script with logging
+
 ```
 
 ---
@@ -92,12 +94,12 @@ LANGCHAIN_API_KEY=your-langsmith-key
 ### CLI Chatbot
 Run the notebook:
 ```bash
-jupyter notebook notebooks/cc-chatbot.ipynb
+jupyter notebook notebooks/rag-cli.ipynb
 ```
 
 ### Ingest Data
 ```bash
-python ingest.py
+python src/ingest.py
 ```
 
 This creates `chroma_db/` with vectorized complaint chunks and logs ingestion metadata to `logs/ingestion.log`.
@@ -105,7 +107,7 @@ This creates `chroma_db/` with vectorized complaint chunks and logs ingestion me
 ### Web UI
 Launch Streamlit app:
 ```bash
-streamlit run app.py
+streamlit run src/app.py
 ```
 
 Example prompts:
