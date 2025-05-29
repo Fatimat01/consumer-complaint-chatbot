@@ -1,5 +1,5 @@
 
-# Consumer Complaints AI Chatbot
+# AI-Powered Assistant for Financial Consumer Complaints
 
 A Retrieval-Augmented Generation (RAG) based chatbot that allows users to interact with real-world financial consumer complaint data. This assistant uses LangChain, OpenAI, ChromaDB, and Streamlit to provide contextual responses based on retrieved complaints, supporting both CLI and web interfaces.
 
