@@ -52,6 +52,7 @@ chatbot/
 ├── src/
 │   └── app.py                          # Streamlit UI chatbot
 │   └── ingest.py                      # One-time or repeat ingestion script with logging
+│   └── utils.py                        # Utility functions for data loading, vector store, etc.
 
 ```
 
