@@ -150,7 +150,7 @@ Built using:
 ## Next Steps
 
 - **Continual Data Update**: Add more complaint data and re-index on ingestion
-- **Persistent Memory**: Add Redis or SQL for long-term memory
+- **Persistent Memory**: Add Redis for long-term memory
 - Add incremental ingestion support to `ingest.py`
 - Enable user uploads or real-time data refresh
 - **Production-Ready Deployment**: Deploy using Docker + EC2/EKS + HTTPS
