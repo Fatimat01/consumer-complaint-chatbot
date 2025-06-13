@@ -55,13 +55,14 @@ def ingest():
         return
 
     embedding = OpenAIEmbeddings(model="text-embedding-3-small")
-    splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=500)
+    # splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=500)
     vectorstore = Chroma(persist_directory=PERSIST_DIR, embedding_function=embedding)
 
     all_chunks = []
     for i, doc_batch in enumerate(batched(new_docs, BATCH_SIZE)):
-        logging.info(f"Processing batch {i + 1}")
-        chunks = splitter.split_documents(doc_batch)
+        logging.info(f"Processing batch {i + 1} of {len(new_docs) // BATCH_SIZE + 1}")  
+        # chunks = splitter.split_documents(doc_batch)
+        chunks = doc_batch
         vectorstore.add_documents(chunks)
         all_chunks.extend(chunks)
         logging.info(f"Added {len(chunks)} chunks to vectorstore.")
