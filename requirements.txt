@@ -11,3 +11,5 @@ streamlit
 tiktoken
 python-dotenv
 ipykernel
+jupyter notebook
+more_itertools

@@ -74,6 +74,8 @@ conda activate cc-chatbot
 OR use pip:
 
 ```bash
+python -m venv env
+source env/bin/activate
 pip install -r requirements.txt
 ```
 
@@ -90,12 +92,16 @@ LANGCHAIN_API_KEY=your-langsmith-key
 
 ## Usage
 
-
+### Download data
+```bash
+mkdir data
+curl -o data/complaints.csv "https://www.consumerfinance.gov/data-research/consumer-complaints/search/api/v1/?date_received_max=2025-01-02&date_received_min=2025-01-01&field=all&format=csv&no_aggs=true&size=18423"
+```
 
 ### CLI Chatbot
 Run the notebook:
 ```bash
-jupyter notebook notebooks/rag-cli.ipynb
+jupyter notebook notebooks/rag-llm.ipynb
 ```
 
 ### Ingest Data
@@ -113,7 +119,7 @@ streamlit run src/app.py
 
 Example prompts:
 - "Which mortgage company has the most issues?"
-- "What are consumers saying about Capital One?"
+  - "What are consumers saying about OPTUM BANK, INC.?"
 - "What issue are consumers most concerned about with Bank of America mortgage?"
 
 ---
@@ -129,7 +135,7 @@ Example prompts:
 
 ## Dataset
 - Source: [CFPB Consumer Complaints](https://www.consumerfinance.gov/data-research/consumer-complaints/)
-- Format: CSV with 3,862,318 complaints in the last one year
+- Format: CSV with 18,423 complaints between January, 01 2025 and January 02, 2025
 
 ---
 
