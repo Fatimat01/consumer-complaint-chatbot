@@ -3,8 +3,6 @@ import streamlit as st
 # import libraries
 import os
 from dotenv import load_dotenv
-from langchain_community.document_loaders.csv_loader import CSVLoader
-from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_core.prompts import ChatPromptTemplate
 #from langchain.embeddings import OpenAIEmbeddings
 from langchain_openai import OpenAIEmbeddings
@@ -12,9 +10,6 @@ from langchain.chains.combine_documents import create_stuff_documents_chain
 from langchain.chains import create_retrieval_chain
 from langchain.chains import create_history_aware_retriever
 from langchain_core.prompts import MessagesPlaceholder
-from langchain_core.messages import AIMessage, HumanMessage
-from langchain_community.chat_message_histories import ChatMessageHistory
-from langchain_core.chat_history import BaseChatMessageHistory
 from langchain_core.runnables.history import RunnableWithMessageHistory
 from langchain_community.chat_message_histories import StreamlitChatMessageHistory
 import time

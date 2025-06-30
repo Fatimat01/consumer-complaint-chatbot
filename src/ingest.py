@@ -11,7 +11,7 @@ from more_itertools import chunked as batched
 DATA_PATH = "data/complaints.csv"
 PERSIST_DIR = "chroma_db"
 LOG_PATH = "logs/ingestion.log"
-BATCH_SIZE = 200
+BATCH_SIZE = 500
 
 # setup logging
 os.makedirs("logs", exist_ok=True)
