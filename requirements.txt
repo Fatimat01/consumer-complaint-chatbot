@@ -11,6 +11,3 @@ streamlit
 tiktoken
 python-dotenv
 ipykernel
-serpapi
-langchain-graph
-google-search-results
